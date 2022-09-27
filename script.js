@@ -1,5 +1,3 @@
-const computerChoice = getComputerChoice();
-let playerChoice;
 let yourScore = Number(0);
 let computerScore = Number(0);
 
@@ -12,12 +10,15 @@ function getComputerChoice() {
 function getPlayerChoice() {
     playerSelection = prompt("Rock, paper or scissors?", "");
     toLower = playerSelection.toLowerCase();
-    Capitalised = toLower.substring(0, 1).toUpperCase() + toLower.substring(1);
-    return Capitalised;
+    playerChoice = toLower.substring(0, 1).toUpperCase() + toLower.substring(1);
+    return playerChoice;
 
 }
 
 function playRound(player, computer) {
+    console.log("You chose: " + playerChoice);
+    console.log("The computer chose: " + computer);
+
     if (player === computer) {
         return "It's a tie. No one wins"
     } else if (player === "Rock" && computer === "Paper") {
@@ -39,16 +40,22 @@ function playRound(player, computer) {
         yourScore++;
         return "Paper beats rock. You win!";
     } else {
-        return "Nothing to show";
+        return "Please choose either 'rock', 'paper', or 'scissors'";
     }
 }
 
 function game() {
     for (let i = 0; i < 5; i++) {
         console.log(playRound(getPlayerChoice(), getComputerChoice()));
-        console.log(yourScore, computerScore);
-
-    }
+        console.log("Your score is: " + yourScore, "The computer's score is: " + computerScore);
+        console.log("")
+ } if (yourScore > computerScore) {
+    return "You scored higher than the computer. You win!"
+ } else if (yourScore === computerScore) {
+    return "You and the computer scored the same. It's a tie!"
+ } else {
+    return "The computer scored higher than you. You lose! Good say sir!"
+ }
 }
 
 
