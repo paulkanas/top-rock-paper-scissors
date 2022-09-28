@@ -2,21 +2,21 @@ let yourScore = Number(0);
 let computerScore = Number(0);
 
 function getComputerChoice() {
-    var values = ["Rock", "Paper", "Scissors"],
-    computerSelection = values[Math.floor(Math.random() * values.length)];
+    let values = ["Rock", "Paper", "Scissors"];
+    let computerSelection = values[Math.floor(Math.random() * values.length)];
     return computerSelection;
 }
 
 function getplayerOneChoice() {
-    promptInput = prompt("Rock, paper or scissors?", "");
-    toLower = promptInput.toLowerCase();
-    playerOneChoice = toLower.substring(0, 1).toUpperCase() + toLower.substring(1);
+    let promptInput = prompt("Rock, paper or scissors?", "");
+    let toLower = promptInput.toLowerCase();
+    let playerOneChoice = toLower.substring(0, 1).toUpperCase() + toLower.substring(1);
     return playerOneChoice;
 
 }
 
 function playRound(playerOne, playerTwo) {
-    console.log("You chose: " + playerOneChoice);
+    console.log("You chose: " + playerOne);
     console.log("The computer chose: " + playerTwo);
 
     if (playerOne === playerTwo) {
