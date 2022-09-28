@@ -3,8 +3,8 @@ let computerScore = Number(0);
 
 function getComputerChoice() {
     var values = ["Rock", "Paper", "Scissors"],
-        computerSelection = values[Math.floor(Math.random() * values.length)];
-        return computerSelection;
+    computerSelection = values[Math.floor(Math.random() * values.length)];
+    return computerSelection;
 }
 
 function getplayerOneChoice() {
@@ -49,13 +49,13 @@ function playSeries() {
         console.log(playRound(getplayerOneChoice(), getComputerChoice()));
         console.log("Your score is: " + yourScore, "The computer's score is: " + computerScore);
         console.log("")
- } if (yourScore > computerScore) {
-    return "You scored higher than the computer. You win!"
- } else if (yourScore === computerScore) {
-    return "You and the computer scored the same. It's a tie!"
- } else {
-    return "The computer scored higher than you. You lose! Good say sir!"
- }
+    } if (yourScore > computerScore) {
+        return "You scored higher than the computer. You win!"
+    } else if (yourScore === computerScore) {
+        return "You and the computer scored the same. It's a tie!"
+    } else {
+        return "The computer scored higher than you. You lose! Good say sir!"
+    }
 }
 
 
