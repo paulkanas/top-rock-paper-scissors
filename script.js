@@ -7,36 +7,36 @@ function getComputerChoice() {
         return computerSelection;
 }
 
-function getPlayerChoice() {
-    playerSelection = prompt("Rock, paper or scissors?", "");
-    toLower = playerSelection.toLowerCase();
-    playerChoice = toLower.substring(0, 1).toUpperCase() + toLower.substring(1);
-    return playerChoice;
+function getplayerOneChoice() {
+    promptInput = prompt("Rock, paper or scissors?", "");
+    toLower = promptInput.toLowerCase();
+    playerOneChoice = toLower.substring(0, 1).toUpperCase() + toLower.substring(1);
+    return playerOneChoice;
 
 }
 
-function playRound(player, computer) {
-    console.log("You chose: " + playerChoice);
-    console.log("The computer chose: " + computer);
+function playRound(playerOne, playerTwo) {
+    console.log("You chose: " + playerOneChoice);
+    console.log("The computer chose: " + playerTwo);
 
-    if (player === computer) {
+    if (playerOne === playerTwo) {
         return "It's a tie. No one wins"
-    } else if (player === "Rock" && computer === "Paper") {
+    } else if (playerOne === "Rock" && playerTwo === "Paper") {
         computerScore++;
         return "Rock loses to paper. You lose!";
-    } else if (player === "Rock" && computer === "Scissors") { 
+    } else if (playerOne === "Rock" && playerTwo === "Scissors") { 
         yourScore++;
         return "Rock beats scissors. You win!";
-    } else if (player === "Scissors" && computer === "Paper") {
+    } else if (playerOne === "Scissors" && playerTwo === "Paper") {
         yourScore++;
         return "Scissors beats paper. You win!";
-    } else if (player === "Scissors" && computer === "Rock") {
+    } else if (playerOne === "Scissors" && playerTwo === "Rock") {
         computerScore++;
         return "Scissors loses to rock. You lose!";
-    } else if (player === "Paper" && computer === "Scissors") {
+    } else if (playerOne === "Paper" && playerTwo === "Scissors") {
         computerScore++;
         return "Paper loses to scissors. You lose!";
-    } else if (player === "Paper" && computer === "Rock") {
+    } else if (playerOne === "Paper" && playerTwo === "Rock") {
         yourScore++;
         return "Paper beats rock. You win!";
     } else {
@@ -44,9 +44,9 @@ function playRound(player, computer) {
     }
 }
 
-function game() {
+function playSeries() {
     for (let i = 0; i < 5; i++) {
-        console.log(playRound(getPlayerChoice(), getComputerChoice()));
+        console.log(playRound(getplayerOneChoice(), getComputerChoice()));
         console.log("Your score is: " + yourScore, "The computer's score is: " + computerScore);
         console.log("")
  } if (yourScore > computerScore) {
@@ -60,7 +60,7 @@ function game() {
 
 
 
-//console.log(playerChoice);
+//console.log(playerOneChoice);
 //console.log(computerChoice);
 
-//console.log(playRound(playerChoice, computerChoice))
+//console.log(playRound(playerOneChoice, computerChoice))
