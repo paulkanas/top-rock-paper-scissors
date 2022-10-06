@@ -1,3 +1,17 @@
+
+const button = document.createElement('button');
+const button2 = document.createElement('button');
+const button3 = document.createElement('button');
+
+button.textContent = "Rock";
+button2.textContent = "Paper";
+button3.textContent = "Scissors";
+
+document.body.appendChild(button);
+document.body.appendChild(button2);
+document.body.appendChild(button3);
+
+
 let yourScore = Number(0);
 let computerScore = Number(0);
 const values = ["Rock", "Paper", "Scissors"];
@@ -24,7 +38,7 @@ function playRound(playerOne, playerTwo) {
     } else if (playerOne === "Rock" && playerTwo === "Paper") {
         computerScore++;
         return "Rock loses to paper. You lose!";
-    } else if (playerOne === "Rock" && playerTwo === "Scissors") { 
+    } else if (playerOne === "Rock" && playerTwo === "Scissors") {
         yourScore++;
         return "Rock beats scissors. You win!";
     } else if (playerOne === "Scissors" && playerTwo === "Paper") {
@@ -44,19 +58,19 @@ function playRound(playerOne, playerTwo) {
     }
 }
 
-function playSeries() {
-    for (let i = 0; i < 5; i++) {
-        console.log(playRound(getplayerOneChoice(), getComputerChoice()));
-        console.log("Your score is: " + yourScore, "The computer's score is: " + computerScore);
-        console.log("")
-    } if (yourScore > computerScore) {
-        return "You scored higher than the computer. You win!"
-    } else if (yourScore === computerScore) {
-        return "You and the computer scored the same. It's a tie!"
-    } else {
-        return "The computer scored higher than you. You lose! Good say sir!"
-    }
-}
+// function playSeries() {
+//     for (let i = 0; i < 5; i++) {
+//         console.log(playRound(getplayerOneChoice(), getComputerChoice()));
+//         console.log("Your score is: " + yourScore, "The computer's score is: " + computerScore);
+//         console.log("")
+//     } if (yourScore > computerScore) {
+//         return "You scored higher than the computer. You win!"
+//     } else if (yourScore === computerScore) {
+//         return "You and the computer scored the same. It's a tie!"
+//     } else {
+//         return "The computer scored higher than you. You lose! Good say sir!"
+//     }
+// }
 
 
 
@@ -64,3 +78,7 @@ function playSeries() {
 //console.log(computerChoice);
 
 //console.log(playRound(playerOneChoice, computerChoice))
+
+
+
+
