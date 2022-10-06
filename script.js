@@ -1,8 +1,8 @@
 let yourScore = Number(0);
 let computerScore = Number(0);
+const values = ["Rock", "Paper", "Scissors"];
 
 function getComputerChoice() {
-    let values = ["Rock", "Paper", "Scissors"];
     let computerSelection = values[Math.floor(Math.random() * values.length)];
     return computerSelection;
 }
